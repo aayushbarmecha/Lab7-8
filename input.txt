@@ -1,1 +1,1 @@
-select all from student.
+Please update the cpi of the student having roll 2001006 to 9.

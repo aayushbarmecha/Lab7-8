@@ -1,5 +1,5 @@
 body {
-    background-image: url("https://images.pexels.com/photos/1448136/pexels-photo-1448136.jpeg?auto=compress&cs=tinysrgb&w=600");
+    background-image: url("https://img.freepik.com/free-photo/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background_1258-28311.jpg?w=1800&t=st=1679912036~exp=1679912636~hmac=ff79f18409b91574de3c0a0a54c037839a7aaec0155be0e7b0c1c27dc50514dd");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -8,8 +8,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    z-index: -1;
-    opacity: 0.5;
+    /* z-index: -1;
+    opacity: 0.5; */
   }
   h1 {
     font-size: 3rem;
@@ -20,8 +20,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     padding: 20px;
+    color: #ffffff;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   }
@@ -62,20 +63,19 @@ body {
   th, td {
     padding: 9px 5px;
     text-align: center;
-    border: 2px solid #cf4040;
+    border: 2px solid #ffffff;
+    font-weight: bold;
   }
   
   th {
-    background-color: rgb(145, 218, 236);
-    color: #333;
+    /* background-color: rgb(145, 218, 236); */
+    color: #ffffff;
     font-weight: bold;
   }
   
   tr:nth-child(even) {
     background-color: #f9f9f9;
-  }
-  
-  tr:hover {
-    background-color: palevioletred;
+    color: #ffffff;
+
   }
   

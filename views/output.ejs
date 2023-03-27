@@ -1,0 +1,28 @@
+<%- include('header'); -%>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Roll</th>
+        <th>CPI</th>
+      </tr>
+    </thead>
+    <% results.forEach(function(result){ %>
+      <tbody>
+        <tr>
+          <td>
+            <%= result.name %>
+          </td>
+          <td>
+            <%= result.roll %>
+          </td>
+          <td>
+            <%= result.cpi %>
+          </td>
+        </tr>
+      </tbody>
+
+      <% }); %>
+  </table>
+
+  <%- include('footer'); -%>

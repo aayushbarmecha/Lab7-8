@@ -1,6 +1,12 @@
 <%- include('header'); -%>
-  <table>
-    <thead>
+<div class="tbody">
+  <h2>Query Converted:</h2>
+  <u>
+    <h3><%= data %></h3>
+  </u>
+</div>
+<table>
+    <thead>1
       <tr>
           <% for(let column_name of Object.keys(results[0])){ %>
               <th><%= column_name %></th>

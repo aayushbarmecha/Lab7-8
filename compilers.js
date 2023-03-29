@@ -37,7 +37,7 @@ app.post("/",function(req,res){
           throw error;
         }
         var data = fs.readFileSync('out.txt', 'utf8');
-        
+        var text = data.toUpperCase();
         connection.query(data, function (err, results, fields) {
             if (err) throw err;
             if(data.split(' ')[1]=='update' || data.split(' ')[1]=='delete'){
@@ -45,10 +45,10 @@ app.post("/",function(req,res){
                 connection.query(st, function (err, results, fields) {
                     if (err) throw err;
                     
-                    res.render("output", {results: results});
+                    res.render("output", {results: results,data:text});
                 });
             }else{
-                res.render("output", {results: results});
+                res.render("output", {results: results,data:text});
             }
             
             

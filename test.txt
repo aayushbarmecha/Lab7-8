@@ -1,0 +1,8 @@
+Please give me all the information of the students.
+Please give me all the information of the student whose roll is 2001006.
+Please give me all the information of the student whose id is 3.
+Please give me all the information of the student whose cpi is 9.1.
+Please give me all the information of the student whose cpi greater than 7.8.
+Please update student roll to 2001089 whose id is 3.
+please remove the student having roll as 2001112.
+please give name and roll from student whose cpi greater than 9.

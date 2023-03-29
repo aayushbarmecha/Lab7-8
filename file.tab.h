@@ -59,7 +59,8 @@
      NAME = 275,
      CPI = 276,
      NUMBER = 277,
-     WORD = 278
+     WORD = 278,
+     ID = 279
    };
 #endif
 /* Tokens.  */
@@ -84,6 +85,7 @@
 #define CPI 276
 #define NUMBER 277
 #define WORD 278
+#define ID 279
 
 
 
@@ -96,7 +98,7 @@ typedef union YYSTYPE
     char* ch;
 }
 /* Line 1529 of yacc.c.  */
-#line 100 "file.tab.h"
+#line 102 "file.tab.h"
 	YYSTYPE;
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1

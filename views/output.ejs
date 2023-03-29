@@ -2,26 +2,20 @@
   <table>
     <thead>
       <tr>
-        <th>NAME</th>
-        <th>ROLL</th>
-        <th>CPI</th>
+          <% for(let column_name of Object.keys(results[0])){ %>
+              <th><%= column_name %></th>
+            <% } %>
       </tr>
     </thead>
     <% results.forEach(function(result){ %>
-      <tbody>
+      
+      <tbody class="tbody">
         <tr>
-          <td>
-            <%= result.name %>
-          </td>
-          <td>
-            <%= result.roll %>
-          </td>
-          <td>
-            <%= result.cpi %>
-          </td>
-        </tr>
+          <% for(key in result){ %>
+          <td><%= result[key] %></td>
+        <% } %>
+      </tr>
       </tbody>
-
       <% }); %>
   </table>
 

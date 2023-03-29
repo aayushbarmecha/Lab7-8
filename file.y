@@ -18,7 +18,7 @@ int yylex();
 %%
 
 %token SELECT CREATE DATABASE DELETE INSERT INTO FROM TABLE WHERE AND SET UPDATE IDENTIFIER OR VALUES SEMI;
-%token ROLL NAME CPI NUMBER WORD;
+%token ROLL NAME CPI NUMBER WORD ID;
 
 
 
@@ -30,13 +30,12 @@ line: DELETE TABLE  WHERE nested ';' '\n' { printf("%s", yylval.ch);exit(0);};
 
 
 fields: field | field ',' field| '*';
-field : ROLL | CPI | NAME;
-
-name_value: NAME '=' WORD | ROLL '=' NUMBER | CPI '=' NUMBER;
+field : ROLL | CPI | NAME| ID;
+name_value: NAME '=' WORD | ROLL '=' NUMBER | CPI '=' NUMBER | ID '=' NUMBER;
 update_nested: name_value ',' name_value | name_value;
 
 nested: condition | condition AND condition;
-condition: ROLL '=' NUMBER | ROLL '>' NUMBER| ROLL '<' NUMBER | CPI '=' NUMBER | CPI '<' NUMBER | CPI '>' NUMBER | NAME '=' WORD ;
+condition: ROLL '=' NUMBER | ROLL '>' NUMBER| ROLL '<' NUMBER | CPI '=' NUMBER | CPI '<' NUMBER | CPI '>' NUMBER | ID '=' NUMBER | ID '<' NUMBER | ID '>' NUMBER | NAME '=' WORD ;
 
 
 %%

@@ -82,7 +82,10 @@ roll                    {   strcat(yylval.ch, " Roll");
 name                    {   strcat(yylval.ch, " Name");
                             return NAME;
                         };
-cpi                     {   strcat(yylval.ch, " Cpi");
+id                      {   strcat(yylval.ch, " id");
+                            return ID;
+                        };
+cpi                     {   strcat(yylval.ch, " cpi");
                             return CPI;
                         };                        
 greater|[>]             {   if(condition)
@@ -117,7 +120,7 @@ to                      {   strcat(yylval.ch, " =");
 [.|;]                   {   strcat(yylval.ch, ";\n");
                             return ';';
                         }
-[0-9]+                  {   strcat(yylval.ch, " ");
+[0-9]+|[0-9]*[.][0-9]+                  {   strcat(yylval.ch, " ");
                             strcat(yylval.ch, yytext);
                             return NUMBER;
                         }

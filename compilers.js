@@ -38,10 +38,20 @@ app.post("/",function(req,res){
         }
         var data = fs.readFileSync('out.txt', 'utf8');
         
-
         connection.query(data, function (err, results, fields) {
             if (err) throw err;
-            res.render("output", {results: results});
+            if(data.split(' ')[1]=='update' || data.split(' ')[1]=='delete'){
+                const st = 'select * from student;'
+                connection.query(st, function (err, results, fields) {
+                    if (err) throw err;
+                    
+                    res.render("output", {results: results});
+                });
+            }else{
+                res.render("output", {results: results});
+            }
+            
+            
         });
     })
 });

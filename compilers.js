@@ -16,8 +16,8 @@ app.set('view engine', 'ejs');
 const connection = mysql.createConnection({
     host:"localhost",
     user:"root",
-    password:"MyNewPass",
-    database:"aayush"
+    password:"password", //your password here
+    database:"database_name" //your database name here
 });
 
 app.get("/" , function(req,res){
@@ -32,7 +32,7 @@ app.post("/",function(req,res){
         } 
     })
    
-    const child = execFile('./q1', (error, stdout, stderr) => {
+    const child = execFile('./q1', (error, stdout, stderr) => {  //your executable file name here
         if (error) {
           throw error;
         }
